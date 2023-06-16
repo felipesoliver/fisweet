@@ -1,18 +1,82 @@
-/** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin');
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
 module.exports = {
+  mode: 'jit',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+    colors: {
+      black: '#000000',
+      white: '#FFFFFF',
+      gray: {
+        light: '#394149',
+        medium: '#5B5B5B',
+        dark: '#1D3444',
       },
+      blue: {
+        light: '#DCEAF5',
+        dark: '#063255',
+      },
+      green: {
+        alert: '#00AB27',
+      },
+      yellow: {
+        warning: '#FFD600',
+      },
+      orange: {
+        DEFAULT: '#F58A07',
+      },
+      red: {
+        danger: '#E90016',
+      },
+      transparent: 'transparent',
+      current: 'currentColor',
+    },
+    screens: {
+      sm: '440px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '1.5xl': '1440px',
+      '2xl': '1536px',
+      '3xl': '1920px',
+    },
+    extend: {
+      fontFamily: {
+        poppins: ['var(--font-poppins)', ...fontFamily.sans],
+      },
+      fontSize: {
+        0: '0px',
+      },
+      transitionDelay: {
+        0: '0ms',
+      },
+      minWidth: (theme) => ({
+        ...theme('spacing'),
+      }),
+      maxWidth: (theme) => ({
+        ...theme('spacing'),
+      }),
+      minHeight: (theme) => ({
+        ...theme('spacing'),
+      }),
+      maxHeight: (theme) => ({
+        ...theme('spacing'),
+      }),
     },
   },
-  plugins: [],
-}
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('./config/tailwind/container.js'),
+    require('./config/tailwind/typography.js'),
+    plugin(function ({ addVariant }) {
+      addVariant('group-active', () => {
+        return `:merge(.group).active &`;
+      });
+    }),
+  ],
+};
