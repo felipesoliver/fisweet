@@ -11,11 +11,11 @@ const Header = () => {
           <Logo />
         </Link>
         <nav className='lg:space-x-8 flex items-center'>
-          <Link className='font-semibold' href="/about">About Us</Link>
-          <Link className='font-semibold' href="/careers">Careers</Link>
-          <Link className='font-semibold' href="/services">Services</Link>
-          <Link className='font-semibold' href="/blog">Blog</Link>
-          <Link className='font-semibold' href="/contact-us">Contact us</Link>
+          <Link className='font-semibold btn-nav' href="/about">About Us</Link>
+          <Link className='font-semibold btn-nav' href="/careers">Careers</Link>
+          <Link className='font-semibold btn-nav' href="/services">Services</Link>
+          <Link className='font-semibold btn-nav' href="/blog">Blog</Link>
+          <Link className='font-semibold btn-nav' href="/contact-us">Contact us</Link>
           <Link className='font-semibold btn-orange-light' href="/clone-project">Clone project</Link>
         </nav>
       </div>
