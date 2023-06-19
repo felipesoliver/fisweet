@@ -7,11 +7,12 @@ import Facebook from '~/assets/icons/facebook.svg'
 import Instagram from '~/assets/icons/instagram.svg'
 import Twitter from '~/assets/icons/twitter.svg'
 import Youtube from '~/assets/icons/youtube.svg'
+import { getCurrentYear } from '~/utils/date'
 
 const Footer = () => {
   return (
     <footer className='relative bg-blue-dark py-10 lg:py-20 lg:before:absolute lg:before:bottom-0 lg:before:left-0 lg:before:w-[3.375rem] lg:before:h-[9rem] lg:before:bg-orange lg:before:rounded-tr-xl lg:after:absolute lg:after:top-9 lg:after:right-0 lg:after:w-[3.375rem] lg:after:h-[18rem] lg:after:bg-orange lg:after:rounded-tl-xl lg:after:rounded-bl-xl'>
-      <Grid className='container gap-y-12 lg:gap-y-0'>
+      <Grid className='container gap-y-12'>
         <div className='col-span-full lg:col-span-4 flex flex-col gap-y-5'>
           <Link href="/" className='block w-fit hover:opacity-70 duration-300'>
             <Logo className="text-white" />
@@ -60,7 +61,24 @@ const Footer = () => {
           <li><Link className='hover:opacity-70 duration-300' href='mailto:hi@finsweet.com'>hi@finsweet.com</Link></li>
           <li><Link className='hover:opacity-70 duration-300' href='tel:+1234567890'>+(123) 456-7890</Link></li>
         </ul>
-        <div></div>
+        <form className='col-span-full lg:col-span-4 text-white space-y-6'>
+          <span className='block text-lg font-semibold'>Join Newsletter</span>
+          <input className="w-full px-8 py-4 rounded-[1.875rem] text-gray-dark focus:outline-none" type="text" placeholder='Type email here' />
+          <button className='btn-orange' type="button">Subscribe</button>
+        </form>
+        <div className='col-span-full flex flex-col-reverse lg:flex-row lg:justify-between gap-y-5 lg:gap-y-0'>
+          <p className='text-white'>
+            &copy; All rights reserved – Finsweet - {getCurrentYear()}
+          </p>
+          <ul className='flex gap-x-8 text-white'>
+            <li>
+              <Link className='hover:opacity-70 duration-300' href="#">Privacy Policy</Link>
+            </li>
+            <li>
+              <Link className='hover:opacity-70 duration-300' href="#">Terms & Conditions</Link>
+            </li>
+          </ul>
+        </div>
       </Grid>
     </footer>
   )
