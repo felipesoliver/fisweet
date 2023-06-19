@@ -73,7 +73,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
       />
         <div
           className={classNames(
-            `${poppins.variable} font-poppins overflow-hidden min-h-screen`
+            `${poppins.variable} font-poppins overflow-hidden min-h-screen pt-16 lg:pt-[5.25rem]`
           )}
         >
           <Header />
