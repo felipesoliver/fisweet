@@ -68,7 +68,7 @@ const HeadlineServices = () => {
         </div>
         {cards.length > 0 && (
           <Swiper
-            className='col-span-full w-full overflow-visible'
+            className='col-span-full w-full overflow-visible pb-16'
             slidesPerView={1.1}
             spaceBetween={24}
             pagination={{

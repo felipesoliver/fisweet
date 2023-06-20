@@ -1,8 +1,9 @@
 import classNames from 'classnames'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
+import Jump from 'react-reveal/Jump'
+import { useRouter } from 'next/router'
 
+import Link from 'next/link'
 import Logo from '~/assets/icons/logo.svg'
 
 const Header = () => {
@@ -40,10 +41,7 @@ const Header = () => {
             <span className="hamburger-inner"></span>
           </span>
         </button>
-        <nav className={classNames('fixed lg:static left-0 w-screen lg:w-fit h-screen lg:h-fit bg-white lg:bg-transparent gap-8 flex flex-col lg:flex-row lg:items-center p-10 duration-200', {
-          'bottom-0': active,
-          '-bottom-[100vh]': !active,
-        })}>
+        <nav className='desktop-nav-menu hidden w-fit h-fit gap-x-8 lg:flex lg:items-center p-10'>
           <Link className='font-semibold btn-nav' href="/about">About Us</Link>
           <Link className='font-semibold btn-nav' href="/careers">Careers</Link>
           <Link className='font-semibold btn-nav' href="/services">Services</Link>
@@ -51,6 +49,19 @@ const Header = () => {
           <Link className='font-semibold btn-nav' href="/contact-us">Contact us</Link>
           <Link className='font-semibold btn-orange-light' href="/clone-project">Clone project</Link>
         </nav>
+        <Jump left cascade when={active} appear>
+          <nav className={classNames('mobile-nav-menu fixed left-0 w-screen h-screen bg-white gap-y-8 flex flex-col p-10 md:p-16 duration-300', {
+            'bottom-0': active,
+            '-bottom-[100vh]': !active,
+          })}>
+              <Link className='font-semibold text-3xl md:text-5xl btn-nav' href="/about">About Us</Link>
+              <Link className='font-semibold text-3xl md:text-5xl btn-nav' href="/careers">Careers</Link>
+              <Link className='font-semibold text-3xl md:text-5xl btn-nav' href="/services">Services</Link>
+              <Link className='font-semibold text-3xl md:text-5xl btn-nav' href="/blog">Blog</Link>
+              <Link className='font-semibold text-3xl md:text-5xl btn-nav' href="/contact-us">Contact us</Link>
+              <Link className='font-semibold btn-orange-light' href="/clone-project">Clone project</Link>
+          </nav>
+        </Jump>
       </div>
     </header>
   )

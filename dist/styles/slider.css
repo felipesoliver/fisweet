@@ -1,0 +1,9 @@
+/* SLIDER */
+
+.swiper-pagination .swiper-pagination-bullet {
+  @apply w-4 h-4 !rounded-lg duration-300;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  @apply w-11 bg-orange;
+}
