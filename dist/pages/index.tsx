@@ -1,10 +1,14 @@
 import type { ReactElement } from 'react'
+import HeadlineServices from '~/components/headline-services'
 import MainHero from '~/components/main-hero'
 import Layout from '~/pages/layout'
 
 const Homepage = () => {
   return (
-    <MainHero />
+    <>
+      <MainHero />
+      <HeadlineServices />
+    </>
   )
 }
 

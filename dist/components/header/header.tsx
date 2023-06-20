@@ -22,7 +22,7 @@ const Header = () => {
   }, [router.asPath])
 
   return (
-    <header className='fixed top-0 left-0 bg-white w-full h-fit'>
+    <header className='fixed top-0 left-0 bg-white w-full h-fit z-[9999]'>
       <div className='container h-16 lg:h-[5.25rem] flex items-center justify-between'>
         <Link className='block w-fit hover:opacity-70 duration-300' href="/">
           <Logo />
