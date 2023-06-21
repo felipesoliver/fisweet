@@ -62,10 +62,12 @@ const cards = [
 const HeadlineServices = () => {
   return (
     <section className='headline-services py-10 lg:py-24'>
-      <Grid className='container gap-5'>
+      <Grid className='container gap-5 lg:gap-y-10'>
         <div className='col-span-full'>
-          <h2 className='text-3xl lg:heading-6xl max-w-[46rem] mb-3'>We help more than 1500 companies from all sectors</h2>
-          <p className='max-w-[46rem]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet eros blandit, hendrerit elit et, mattis purus. Vivamus commodo suscipit tellus et pellentesque.</p>
+          <Fade>
+            <h2 className='text-3xl lg:heading-6xl max-w-[46rem] mb-3'>We help more than 1500 companies from all sectors</h2>
+            <p className='max-w-[46rem]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet eros blandit, hendrerit elit et, mattis purus. Vivamus commodo suscipit tellus et pellentesque.</p>
+          </Fade>
         </div>
         {cards.length > 0 && (
           <>
