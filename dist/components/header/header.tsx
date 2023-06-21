@@ -6,6 +6,29 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Logo from '~/assets/icons/logo.svg'
 
+const headerMenu = [
+  {
+    title: 'About Us',
+    url: '/about',
+  },
+  {
+    title: 'Careers',
+    url: '/careers',
+  },
+  {
+    title: 'Services',
+    url: '/services',
+  },
+  {
+    title: 'Blog',
+    url: '/blog',
+  },
+  {
+    title: 'Contact Us',
+    url: '/contact-us',
+  },
+]
+
 const Header = () => {
   const router = useRouter()
   const [active, setActive] = useState(false)
@@ -42,11 +65,12 @@ const Header = () => {
           </span>
         </button>
         <nav className='desktop-nav-menu hidden w-fit h-fit gap-x-8 lg:flex lg:items-center p-10'>
-          <Link className='font-semibold btn-nav' href="/about">About Us</Link>
-          <Link className='font-semibold btn-nav' href="/careers">Careers</Link>
-          <Link className='font-semibold btn-nav' href="/services">Services</Link>
-          <Link className='font-semibold btn-nav' href="/blog">Blog</Link>
-          <Link className='font-semibold btn-nav' href="/contact-us">Contact us</Link>
+          {headerMenu.length > 0 &&
+            headerMenu.map((link: any, index: any) => (
+              <Link key={`link-${index}`} className={classNames('font-semibold btn-nav', {
+                'active': router.asPath.includes(link.url)
+              })} href={link.url}>{link.title}</Link>
+          ))}
           <Link className='font-semibold btn-orange-light' href="/clone-project">Clone project</Link>
         </nav>
         <Jump left cascade when={active} appear>

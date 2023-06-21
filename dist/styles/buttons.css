@@ -8,6 +8,10 @@
   @apply relative lg:hover:text-orange lg:hover:translate-x-1 duration-200 lg:before:absolute lg:before:left-0 lg:before:top-1/2 lg:before:-translate-y-1/2 lg:before:w-1 lg:before:h-1 lg:before:rounded-full lg:before:bg-transparent lg:before:hover:bg-orange lg:before:hover:-translate-x-3 lg:before:duration-200;
 }
 
+.btn-nav.active {
+  @apply text-orange lg:before:bg-orange lg:before:-translate-x-3;
+}
+
 .btn-orange {
   @apply block w-fit px-8 py-4 rounded-[1.875rem] !bg-orange hover:!bg-opacity-10 text-white hover:text-orange duration-300 font-semibold;
 }
