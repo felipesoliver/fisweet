@@ -49,7 +49,18 @@ module.exports = {
       fontFamily: {
         poppins: ['var(--font-poppins)', ...fontFamily.sans],
       },
+      keyframes: {
+        fadeIn: {
+          '0%': {
+            opacity: '0',
+          },
+          '100%': {
+            opacity: '1',
+          },
+        },
+      },
       animation: {
+        fadeIn: 'fadeIn .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards',
         'spin-slow': 'spin 5s linear infinite',
       },
       fontSize: {
