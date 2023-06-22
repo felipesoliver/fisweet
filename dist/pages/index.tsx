@@ -1,4 +1,5 @@
 import type { ReactElement } from 'react'
+import HeadlineAbout from '~/components/headline-about/headline-about'
 import HeadlineServices from '~/components/headline-services'
 import HeadlineSolutions from '~/components/headline-solutions'
 import MainHero from '~/components/main-hero'
@@ -10,6 +11,7 @@ const Homepage = () => {
       <MainHero />
       <HeadlineServices />
       <HeadlineSolutions />
+      <HeadlineAbout />
     </>
   )
 }

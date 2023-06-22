@@ -3,61 +3,11 @@ import { Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Fade from 'react-reveal/Fade'
 import Link from 'next/link'
+import { data } from './data'
 
-import servicesCardOne from '~/assets/images/services-card1.png'
-import servicesCardTwo from '~/assets/images/services-card2.png'
-import servicesCardThree from '~/assets/images/services-card3.png'
 import ArrowRight from '~/assets/icons/arrow-right.svg'
 import Grid from '~/components/grid'
 import Image from '~/components/image'
-
-const pics = {
-  1: servicesCardOne,
-  2: servicesCardTwo,
-  3: servicesCardThree,
-}
-
-const cards = [
-  {
-    title: 'Business strategy',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet eros blandit, hendrerit elit et, ',
-    image: {
-      src: pics[1],
-      width: '400',
-      height: '242',
-      alt: 'img-1',
-    },
-    cta: {
-      url: '/services',
-    }
-  },
-  {
-    title: 'Digitalization',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet eros blandit, hendrerit elit et, ',
-    image: {
-      src: pics[2],
-      width: '400',
-      height: '242',
-      alt: 'img-2',
-    },
-    cta: {
-      url: '/services',
-    }
-  },
-  {
-    title: 'Risk assessment',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet eros blandit, hendrerit elit et, ',
-    image: {
-      src: pics[3],
-      width: '400',
-      height: '242',
-      alt: 'img-3',
-    },
-    cta: {
-      url: '/services',
-    }
-  },
-]
 
 const HeadlineServices = () => {
   return (
@@ -65,11 +15,11 @@ const HeadlineServices = () => {
       <Grid className='container gap-5 lg:gap-y-10'>
         <div className='col-span-full'>
           <Fade>
-            <h2 className='text-3xl lg:heading-6xl max-w-[46rem] mb-3'>We help more than 1500 companies from all sectors</h2>
-            <p className='max-w-[46rem]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet eros blandit, hendrerit elit et, mattis purus. Vivamus commodo suscipit tellus et pellentesque.</p>
+            <h2 className='text-3xl lg:heading-6xl max-w-[46rem] mb-3'>{data.title}</h2>
+            <p className='max-w-[46rem]'>{data.description}</p>
           </Fade>
         </div>
-        {cards.length > 0 && (
+        {data.cards.length > 0 && (
           <>
             <Swiper
               className='lg:hidden col-span-full w-full overflow-visible pb-16'
@@ -90,7 +40,7 @@ const HeadlineServices = () => {
                 },
               }}
             >
-              {cards.map((item: any, index: any) => (
+              {data.cards.map((item: any, index: any) => (
                 <SwiperSlide key={`card-${index}`}>
                   <article className='group lg:col-span-4'>
                     <Link href={item.cta.url}>
@@ -110,7 +60,7 @@ const HeadlineServices = () => {
             <div className='hidden lg:block col-span-full'>
               <Fade bottom cascade distance="100px">
                 <div className='grid grid-cols-12 gap-x-5'>
-                  {cards.map((item: any, index: any) => (
+                  {data.cards.map((item: any, index: any) => (
                     <article className='group lg:col-span-4' key={`card-${index}`}>
                       <Link href={item.cta.url}>
                         <figure className='w-full h-[15.125rem] rounded-2xl overflow-hidden'>

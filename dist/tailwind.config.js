@@ -49,6 +49,9 @@ module.exports = {
       fontFamily: {
         poppins: ['var(--font-poppins)', ...fontFamily.sans],
       },
+      animation: {
+        'spin-slow': 'spin 5s linear infinite',
+      },
       fontSize: {
         0: '0px',
       },
