@@ -64,7 +64,7 @@ const Header = () => {
             <span className="hamburger-inner"></span>
           </span>
         </button>
-        <nav className='desktop-nav-menu hidden w-fit h-fit gap-x-8 lg:flex lg:items-center p-10'>
+        <nav className='desktop-nav-menu hidden w-fit h-fit gap-x-8 lg:flex lg:items-center'>
           {headerMenu.length > 0 &&
             headerMenu.map((link: any, index: any) => (
               <Link key={`link-${index}`} className={classNames('font-semibold btn-nav', {
