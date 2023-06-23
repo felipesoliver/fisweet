@@ -64,7 +64,7 @@ const HeadlineServices = () => {
                     <article className='group lg:col-span-4' key={`card-${index}`}>
                       <Link href={item.cta.url}>
                         <figure className='w-full h-[15.125rem] rounded-2xl overflow-hidden'>
-                          <Image className='w-full h-full object-cover group-hover:lg:scale-110 duration-300' {...item.image} />
+                          <Image className='w-full h-full object-cover group-hover:lg:scale-110 lg:grayscale group-hover:lg:grayscale-0 duration-300' {...item.image} />
                         </figure>
                         <div className='pt-8 space-y-6'>
                           <h3 className='text-2xl'>{item.title}</h3>
