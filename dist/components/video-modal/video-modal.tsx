@@ -37,7 +37,7 @@ const VideoModal = ({
         className="w-full lg:w-[46.25rem] 2xl:w-[75rem] h-full lg:h-[27.5rem] 2xl:h-[43.75rem] lg:rounded-3xl overflow-hidden"
         ref={reference}
       >
-        <video className="w-full h-full object-cover" controls autoPlay loop>
+        <video className="w-full h-full object-cover" autoPlay loop>
           <source src='/motion.mp4' type="video/mp4" />
         </video>
       </div>
