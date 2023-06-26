@@ -9,15 +9,14 @@ import ArrowRight from '~/assets/icons/arrow-right.svg'
 import Grid from '~/components/grid'
 import Image from '~/components/image'
 
-const HeadlineServices = () => {
+const HeadlineNews = () => {
   return (
-    <section className='headline-services py-10 lg:py-24'>
+    <section className='headline-news py-10 lg:py-20 bg-blue-light'>
       <Grid className='container gap-5 lg:gap-y-10'>
         <div className='col-span-full'>
           <Fade>
             <h2 className='text-3xl lg:heading-6xl max-w-[46rem] mb-3'>{data.title}</h2>
-            <p className='max-w-[46rem]'>{data.description}</p>
-          </Fade>
+           </Fade>
         </div>
         {data.cards.length > 0 && (
           <>
@@ -44,12 +43,12 @@ const HeadlineServices = () => {
                 <SwiperSlide key={`card-${index}`}>
                   <article className='group lg:col-span-4'>
                     <Link href={item.cta.url}>
-                      <figure className='w-full h-[15.125rem] rounded-2xl overflow-hidden'>
+                      <figure className='w-full h-[15.125rem] rounded-t-2xl overflow-hidden'>
                         <Image className='w-full h-full object-cover group-hover:lg:scale-110 duration-300' {...item.image} />
                       </figure>
-                      <div className='pt-5 lg:pt-8 space-y-4'>
-                        <h3 className='text-2xl'>{item.title}</h3>
-                        <p>{item.description}</p>
+                      <div className='p-5 lg:p-8 space-y-4 bg-white rounded-b-2xl'>
+                        <h3 className='text-2xl text-ellipsis line-clamp-2'>{item.title}</h3>
+                        <p className='text-ellipsis line-clamp-3'>{item.description}</p>
                         <button className='flex items-center gap-x-2 text-orange font-medium'><span>Learn More</span><ArrowRight className="group-hover:lg:translate-x-1 duration-200" /></button>
                       </div>
                     </Link>
@@ -63,10 +62,10 @@ const HeadlineServices = () => {
                   {data.cards.map((item: any, index: any) => (
                     <article className='group lg:col-span-4' key={`card-${index}`}>
                       <Link href={item.cta.url}>
-                        <figure className='w-full h-[15.125rem] rounded-2xl overflow-hidden'>
+                        <figure className='w-full h-[15.125rem] rounded-t-2xl overflow-hidden'>
                           <Image className='w-full h-full object-cover group-hover:lg:scale-110 lg:grayscale group-hover:lg:grayscale-0 duration-300' {...item.image} />
                         </figure>
-                        <div className='pt-8 space-y-6'>
+                        <div className='p-8 space-y-6 bg-white rounded-b-2xl'>
                           <h3 className='text-2xl'>{item.title}</h3>
                           <p>{item.description}</p>
                           <button className='flex items-center gap-x-2 text-orange font-medium'><span>Learn More</span><ArrowRight className="group-hover:lg:translate-x-1 duration-200" /></button>
@@ -84,4 +83,4 @@ const HeadlineServices = () => {
   )
 }
 
-export default HeadlineServices
+export default HeadlineNews

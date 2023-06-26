@@ -34,7 +34,7 @@ const VideoModal = ({
         <Close className="w-full h-full text-white" />
       </button>
       <div
-        className="w-full lg:w-[46.25rem] 2xl:w-[55.625rem] h-full lg:h-[27.5rem] 2xl:h-[31.25rem] lg:rounded-3xl overflow-hidden"
+        className="w-full lg:w-[46.25rem] 2xl:w-[75rem] h-full lg:h-[27.5rem] 2xl:h-[43.75rem] lg:rounded-3xl overflow-hidden"
         ref={reference}
       >
         <video className="w-full h-full object-cover" controls autoPlay loop>
