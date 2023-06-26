@@ -23,6 +23,7 @@
     "paths": {
       "~/assets/*": ["assets/*"],
       "~/components/*": ["components/*"],
+      "~/helpers/*": ["helpers/*"],
       "~/pages/*": ["pages/*"],
       "~/styles/*": ["styles/*"],
       "~/utils/*": ["utils/*"],

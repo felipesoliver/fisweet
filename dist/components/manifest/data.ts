@@ -3,7 +3,6 @@ import motionThumb from '~/assets/images/motion-thumb.png'
 
 export const data = {
   video: {
-    src: '/motion.mp4',
     thumb: {
       src: motionThumb,
       width: 620,
