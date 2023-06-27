@@ -1,7 +1,7 @@
 import React from 'react'
 import { Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-// import Fade from 'react-reveal/Fade'
+import Fade from '@successtar/react-reveal/Fade'
 import Link from 'next/link'
 import { data } from './data'
 
@@ -14,9 +14,9 @@ const HeadlineNews = () => {
     <section className='headline-news py-10 lg:py-20 bg-blue-light'>
       <Grid className='container gap-5 lg:gap-y-10'>
         <div className='col-span-full'>
-          {/* <Fade> */}
+          <Fade>
             <h2 className='text-3xl lg:heading-6xl max-w-[46rem] mb-3'>{data.title}</h2>
-           {/* </Fade> */}
+          </Fade>
         </div>
         {data.cards.length > 0 && (
           <>
@@ -57,7 +57,7 @@ const HeadlineNews = () => {
               ))}
             </Swiper>
             <div className='hidden lg:block col-span-full'>
-              {/* <Fade bottom cascade distance="100px"> */}
+              <Fade bottom cascade distance="100px">
                 <div className='grid grid-cols-12 gap-x-5'>
                   {data.cards.map((item: any, index: any) => (
                     <article className='group lg:col-span-4' key={`card-${index}`}>
@@ -74,7 +74,7 @@ const HeadlineNews = () => {
                     </article>
                   ))}
                 </div>
-              {/* </Fade> */}
+              </Fade>
             </div>
           </>
         )}

@@ -1,6 +1,6 @@
 import React from 'react'
-// import Fade from 'react-reveal/Fade'
-// import Flip from 'react-reveal/Flip'
+import Fade from '@successtar/react-reveal/Fade'
+import Flip from '@successtar/react-reveal/Flip'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -22,9 +22,9 @@ const MainHero = () => {
       <Grid className='container h-full gap-y-5 lg:gap-y-0'>
         <div className='col-span-full lg:col-span-6 flex flex-col justify-center pt-5 lg:pt-0'>
           <h1 className='text-4xl md:heading-7xl mb-3'>
-            {/* <Flip left cascade> */}
+            <Flip left cascade>
               Prosper with our bespoke solutions
-            {/* </Flip> */}
+            </Flip>
           </h1>
           <p className='mb-8 max-w-[31.875rem]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique</p>
           <div className='lg:flex lg:items-center lg:gap-5'>
@@ -39,9 +39,9 @@ const MainHero = () => {
           </div>
         </div>
         <div className='col-span-full lg:col-span-6 lg:flex lg:items-end'>
-          {/* <Fade duration={2000}> */}
+          <Fade duration={2000}>-
             <Image src={pics[1]} className='hidden lg:block w-full h-[530px] object-cover' width="934" height="645" alt="picture-1" />
-          {/* </Fade> */}
+          </Fade>
           <Image src={pics[2]} className='lg:hidden w-full' width="934" height="645" alt="picture-1" />
         </div>
       </Grid>

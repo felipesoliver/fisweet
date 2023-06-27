@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import React, { useCallback, useState } from 'react'
-// import Fade from 'react-reveal/Fade'
+import Fade from '@successtar/react-reveal/Fade'
 
 import Image from '~/components/image'
 import useOutsideClick from '~/helpers/use-click-outside'
@@ -31,7 +31,7 @@ const Manifest = () => {
       <section className='manifest py-10 lg:py-20'>
         <div className='container flex flex-col-reverse gap-5 lg:grid lg:grid-cols-12'>
           <div className='lg:col-span-5 space-y-6 flex flex-col justify-center'>
-            {/* <Fade> */}
+            <Fade>
               <h2 className='text-2xl lg:text-4xl lg:font-semibold'>{data.title}</h2>
               <p>{data.description}</p>
               <div className='flex items-center gap-x-6'>
@@ -41,10 +41,10 @@ const Manifest = () => {
                   <p className='text-orange text-sm lg:text-lg'>{data.author.charge}</p>
                 </div>
               </div>
-            {/* </Fade> */}
+            </Fade>
           </div>
           <div className='w-full lg:w-auto lg:col-span-6 lg:col-start-7 block relative h-fit rounded-[1.25rem] overflow-hidden'>
-            {/* <Fade right distance='50px'> */}
+            <Fade right distance='50px'>
               <Image
                 {...data.video.thumb}
                 className="w-full h-auto lg:object-cover lg:object-center"
@@ -68,7 +68,7 @@ const Manifest = () => {
                   className="block w-[3.25rem] h-[3.25rem] transition-all duration-200 ease-in-out lg:group-hover:scale-110"
                 />
               </button>
-            {/* </Fade> */}
+            </Fade>
           </div>
         </div>
       </section>

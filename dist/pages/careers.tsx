@@ -4,23 +4,22 @@ import HeadlineNews from '~/components/headline-news'
 import Manifest from '~/components/manifest'
 import Layout from '~/pages/layout'
 
-const About = () => {
+const Careers = () => {
   return (
     <>
       <NextSeo
-        title='Finsweet | About'
-        canonical='https://fo-finsweet.vercel.app/about'
+        title='Finsweet | Careers'
+        canonical='https://fo-finsweet.vercel.app/careers'
       />
-      <Manifest />
-      <HeadlineNews />
+       <HeadlineNews />
     </>
   )
 }
 
-About.getLayout = function getLayout(page: ReactElement) {
+Careers.getLayout = function getLayout(page: ReactElement) {
   return (
     <Layout>{page}</Layout>
   )
 }
 
-export default About
+export default Careers

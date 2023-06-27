@@ -72,10 +72,10 @@ const Footer = () => {
           </p>
           <ul className='flex gap-x-8 text-white'>
             <li>
-              <Link className='hover:opacity-70 duration-300' href="#">Privacy Policy</Link>
+              <Link className='hover:opacity-70 duration-300' href="/privacy-policy">Privacy Policy</Link>
             </li>
             <li>
-              <Link className='hover:opacity-70 duration-300' href="#">Terms & Conditions</Link>
+              <Link className='hover:opacity-70 duration-300' href="/privacy-policy">Terms & Conditions</Link>
             </li>
           </ul>
         </div>
