@@ -2,7 +2,9 @@ import { NextSeo } from 'next-seo'
 import type { ReactElement } from 'react'
 import HeadlineNews from '~/components/headline-news'
 import Manifest from '~/components/manifest'
+import SecondaryHero from '~/components/secondary-hero'
 import Layout from '~/pages/layout'
+import { dataOne } from '~/components/secondary-hero/data'
 
 const About = () => {
   return (
@@ -11,6 +13,7 @@ const About = () => {
         title='Finsweet | About'
         canonical='https://fo-finsweet.vercel.app/about'
       />
+      <SecondaryHero data={dataOne} circlePosition={{bottom: true}} />
       <Manifest />
       <HeadlineNews />
     </>

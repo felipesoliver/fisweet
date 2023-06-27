@@ -46,7 +46,7 @@ const HeadlineAbout = () => {
           </Fade>
         </div>
         <div className='relative w-full lg:col-span-6'>
-          <SpinCircle top />
+          <SpinCircle circlePosition={{top: true}} />
           <Fade right distance='50px'>
             <Image className='rounded-[1.25rem]' {...data.featuredImage} />
           </Fade>
