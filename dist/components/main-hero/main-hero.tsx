@@ -39,7 +39,7 @@ const MainHero = () => {
           </div>
         </div>
         <div className='col-span-full lg:col-span-6 lg:flex lg:items-end'>
-          <Fade duration={2000}>-
+          <Fade duration={2000}>
             <Image src={pics[1]} className='hidden lg:block w-full h-[530px] object-cover' width="934" height="645" alt="picture-1" />
           </Fade>
           <Image src={pics[2]} className='lg:hidden w-full' width="934" height="645" alt="picture-1" />
