@@ -5,6 +5,7 @@ import Manifest from '~/components/manifest'
 import SecondaryHero from '~/components/secondary-hero'
 import Layout from '~/pages/layout'
 import { dataOne } from '~/components/secondary-hero/data'
+import BigNumbers from '~/components/big-numbers'
 
 const About = () => {
   return (
@@ -14,6 +15,7 @@ const About = () => {
         canonical='https://fo-finsweet.vercel.app/about'
       />
       <SecondaryHero data={dataOne} circlePosition={{bottom: true}} />
+      <BigNumbers />
       <Manifest />
       <HeadlineNews />
     </>
