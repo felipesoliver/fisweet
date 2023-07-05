@@ -12,7 +12,7 @@ export const data = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscin. Curabitur sit amet eros elit et.'
     },
     {
-      number: 34,
+      number: 30,
       title: 'Employees',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscin. Curabitur sit amet eros elit et.'
     },

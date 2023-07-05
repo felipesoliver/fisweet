@@ -25,15 +25,17 @@ const BigNumbers = () => {
             <p>{data.description}</p>
           </Fade>
         </div>
-        <ul className='col-span-full flex flex-col lg:flex-row gap-5'>
-          {data.numbers.map((item: any, index: any) => (
-            <li className='space-y-4' key={`item-${index}`}>
-              <span className='text-4xl font-semibold text-orange'><CountUp isCounting={isCountActive} duration={5} end={item.number} />+</span>
-              <h3 className='text-2xl font-semibold'>{item.title}</h3>
-              <p>{item.description}</p>
-            </li>
-          ))}
-        </ul>
+        <Fade cascade bottom distance="80px">
+          <ul className='col-span-full flex flex-col lg:flex-row gap-5'>
+            {data.numbers.map((item: any, index: any) => (
+              <li className='space-y-4' key={`item-${index}`}>
+                <span className='text-4xl font-semibold text-orange'><CountUp isCounting={isCountActive} duration={5} end={item.number} />+</span>
+                <h3 className='text-2xl font-semibold'>{item.title}</h3>
+                <p>{item.description}</p>
+              </li>
+            ))}
+          </ul>
+        </Fade>
       </Grid>
     </section>
   )
