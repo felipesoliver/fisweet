@@ -1,5 +1,6 @@
 import { NextSeo } from 'next-seo'
 import type { ReactElement } from 'react'
+import Archive from '~/components/archive'
 import Layout from '~/pages/layout'
 
 const Blog = () => {
@@ -9,6 +10,7 @@ const Blog = () => {
         title='Finsweet | Blog'
         canonical='https://fo-finsweet.vercel.app/blog'
       />
+      <Archive/>
     </>
   )
 }
